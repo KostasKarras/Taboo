@@ -60,7 +60,7 @@
                 android:gravity="center_horizontal"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:text="Forbidden Words"
+                android:text="Απαγορευμένες Λέξεις"
                 android:textStyle="bold|italic" />
 
             <TextView

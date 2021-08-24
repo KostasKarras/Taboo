@@ -78,25 +78,20 @@ public class Play extends AppCompatActivity {
 
         String [] words = read("Data.txt");
         String [] similarWords = read("SimilarWords.txt");
-        /*IMPORTANT
-         *This must be 2x2 array. With the first read i will have the five words in a row. So, i have to make another one
-         *reader, to be able to read the five words into a table.
-        **/
 
         Random random = new Random();
         int rand = random.nextInt(lines);
         System.out.println("Random number: " + rand);
 
-        String title = "";
-        title = words[rand];
+        String title = words[rand];
+        String forbiddenWords = similarWords[rand];
+        String [] forbiddenWordsInArray = forbiddenWords.split(",", 5);
 
-        String similarWord1title = similarWords[0];
-        String similarWord2title = similarWords[1];
-        String similarWord3title = similarWords[2];
-        String similarWord4title = similarWords[3];
-        String similarWord5title = similarWords[4];
-
-        System.out.println("Title: " + title);
+        String similarWord1title = forbiddenWordsInArray[0];
+        String similarWord2title = forbiddenWordsInArray[1];
+        String similarWord3title = forbiddenWordsInArray[2];
+        String similarWord4title = forbiddenWordsInArray[3];
+        String similarWord5title = forbiddenWordsInArray[4];
 
         word = (TextView) findViewById(R.id.word);
         similarWord1 = (TextView) findViewById(R.id.SimilarWord1);
